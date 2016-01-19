@@ -3,11 +3,17 @@ package backend
 class Company {
 
     static constraints = {
-        name(blank: false)
-        createdAt(blank: false)
     }
 
-    Date createdAt;
-    String name;
+    static hasOne = [
+        address: Address
+    ]
+
+    static hasMany = [
+        employee: Employee
+    ]
+
+    Date createdAt
+    String name
 
 }
