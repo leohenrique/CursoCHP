@@ -54,6 +54,12 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
+        json:
+            default:
+                deep: true
+        xml:
+            default:
+                deep: true
     views:
         default:
             codec: html
@@ -80,7 +86,7 @@ endpoints:
 dataSource:
     pooled: true
     jmxExport: true
-    dbCreate: create
+    dbCreate: none
     driverClassName: org.postgresql.Driver
     dialect: org.hibernate.dialect.PostgreSQL82Dialect
     url: jdbc:postgresql://localhost:5432/chp

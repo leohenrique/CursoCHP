@@ -4,6 +4,7 @@ class Address {
 
     static constraints = {
         number(nullable: true)
+        complement(nullable: true)
         reference(nullable: true)
     }
 
@@ -12,7 +13,8 @@ class Address {
     ]
 
     String street
-    String number
+    Integer number
+    String complement
     String zip
     String reference
     String formattedAddress
